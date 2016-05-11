@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/back2"
+    android:orientation="vertical"
+    android:fillViewport="false">
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/RelativeLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+            <ImageButton
+                android:id="@+id/Principal_Menu1"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="@dimen/activity_horizontal_margin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/cadprop"
+                android:background="@android:color/transparent"/>
+
+            <ImageButton
+                android:id="@+id/Principal_Menu2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:layout_marginBottom="@dimen/activity_horizontal_margin"
+                android:src="@drawable/cadpet"
+                android:background="@android:color/transparent"/>
+
+            <ImageButton
+                android:id="@+id/Principal_Menu3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:layout_marginBottom="@dimen/activity_horizontal_margin"
+                android:src="@drawable/cadcon"
+                android:background="@android:color/transparent"/>
+
+    </LinearLayout>
+
+</ScrollView>

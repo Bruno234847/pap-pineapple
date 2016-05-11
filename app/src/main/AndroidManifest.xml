@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.pap.pap_v01" >
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/icone"
+        android:label="@string/app_nameIcone"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".ActivityLogin">
+
+
+
+        </activity>
+
+        <activity android:name=".ActivityMenu">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+        <activity android:name=".FormularioProprietarioActivity" />
+        <activity android:name=".FormularioPetActivity" />
+        <activity android:name=".FormularioConsultaActivity" />
+        <activity android:name=".ListaProprietarioActivity" />
+        <activity android:name=".ListaPetActivity" />
+        <activity android:name=".ListaConsultaActivity" />
+
+    </application>
+
+</manifest>
