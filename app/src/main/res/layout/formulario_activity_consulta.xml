@@ -55,25 +55,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
-        <RelativeLayout
-            android:id="@+id/procedimentos"
-            android:layout_width="match_parent"
-            android:layout_height="40dp">
-
-            <TextView
-                android:id="@+id/texto"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/activity_vertical_margin"
-                android:layout_marginRight="@dimen/activity_vertical_margin"
-                android:singleLine="true"
-                android:textSize="18dp"
-                android:layout_centerVertical="true"
-                android:layout_centerHorizontal="true"
-                android:text="Procedimento" />
-
-        </RelativeLayout>
-
         <EditText
             android:id="@+id/formulario_observacao_consulta"
             android:hint="Observação"

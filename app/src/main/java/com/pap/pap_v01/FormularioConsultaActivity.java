@@ -62,67 +62,6 @@ public class FormularioConsultaActivity extends AppCompatActivity {
             helperConsulta.preencherConsulta(consulta);
         }
 
-//TEXTVIEW PARA PROCEDIMENTOS
-
-        lista.add("Consulta");
-        lista.add("Banho");
-        lista.add("Tosa");
-        lista.add("Vacina");
-        lista.add("Day Care");
-
-        View openDialog = (View) findViewById(R.id.procedimentos);
-        openDialog.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-
-                final CharSequence[] dialogLista = lista.toArray(new CharSequence[lista.size()]);
-                final AlertDialog.Builder builderDialog = new AlertDialog.Builder(FormularioConsultaActivity.this);
-                builderDialog.setTitle("Selecione um procedimento");
-                int quantidade = dialogLista.length;
-                boolean[] ativo = new boolean[quantidade];
-
-                builderDialog.setMultiChoiceItems(dialogLista, ativo,
-                        new DialogInterface.OnMultiChoiceClickListener() {
-                            public void onClick(DialogInterface dialog, int whichButton, boolean isChecked) {
-                            }
-                        });
-
-                builderDialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-
-                        ListView lista = ((AlertDialog) dialog).getListView();
-                        StringBuilder stringBuilder = new StringBuilder();
-                        for (int i = 0; i < lista.getCount(); i++) {
-                            boolean checked = lista.isItemChecked(i);
-
-                            if (checked) {
-                                if (stringBuilder.length() > 0) stringBuilder.append(",");
-                                stringBuilder.append(lista.getItemAtPosition(i));
-                            }
-                        }
-                        if (stringBuilder.toString().trim().equals("")) {
-                            ((TextView) findViewById(R.id.texto)).setText("Procedimentos");
-                            stringBuilder.setLength(0);
-                        } else {
-                            ((TextView) findViewById(R.id.texto)).setText(stringBuilder);
-                        }
-                    }
-                });
-
-                builderDialog.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        ((TextView) findViewById(R.id.texto)).setText("Procedimentos");
-                    }
-                });
-                AlertDialog alert = builderDialog.create();
-                alert.show();
-            }
-        });
-
-
 //ACIONAR O SERVIÇO DE TAXI
 
         Switch switch1 = (Switch) findViewById(R.id.servicoTaxi);

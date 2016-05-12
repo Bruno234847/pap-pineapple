@@ -31,7 +31,6 @@ public class HelperConsulta {
         consulta.setData_consulta(campoData_consulta.getText().toString());
         consulta.setHora_consulta(campoHora_consulta.getText().toString());
         consulta.setProcedimento_consulta(campoProcedimento_consulta.getText().toString());
-        //consulta.setProcedimento_consulta(campoProcedimento_consulta2.getSelectedItem().toString());
         consulta.setObservacao_consulta(campoObservacao_consulta.getText().toString());
 
         return consulta;
@@ -45,7 +44,6 @@ public class HelperConsulta {
         campoData_consulta.setText(consulta.getData_consulta());
         campoHora_consulta.setText(consulta.getHora_consulta());
         campoProcedimento_consulta.setText(consulta.getProcedimento_consulta());
-        //campoProcedimento_consulta.setSelectedItem(consulta.getProcedimento_consulta2());
         campoObservacao_consulta.setText(consulta.getObservacao_consulta());
 
         this.consulta = consulta;
